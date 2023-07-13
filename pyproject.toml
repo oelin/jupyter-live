@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "jupyter-live"
+version = "0.1.0"
+description = ""
+authors = ["Kore"]
+readme = "README.md"
+packages = [{include = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+jupyterlab = "^4.0.3"
+nbconvert = "^7.6.0"
+markdown-to-jupyter = {git = "https://github.com/oelin/markdown-to-jupyter"}
+watchdog = "^3.0.0"
+cleo = "^2.0.1"
+
+[tool.poetry.scripts]
+jupyter-live = "src.__main__:run"
+
+[tool.poetry.group.dev.dependencies]
+reindent = "^3.5.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
